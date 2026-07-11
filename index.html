@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK TERMINAL OS | ensanguentei</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Tela de Boot -->
+    <div id="boot">
+        <pre id="boot-text"></pre>
+    </div>
+
+    <!-- Matrix -->
+    <canvas id="matrix"></canvas>
+
+    <!-- Fundo -->
+    <div class="overlay"></div>
+
+    <!-- Login -->
+    <div class="container">
+
+        <div class="login-box">
+
+            <h1 class="title">BLACK TERMINAL OS</h1>
+
+            <p id="form-title">Crie sua conta</p>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Usuário">
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Senha">
+
+            <label class="check">
+
+                <input type="checkbox" id="showPassword">
+
+                Mostrar senha
+
+            </label>
+
+            <button id="mainButton">
+
+                Criar Conta
+
+            </button>
+
+            <p id="switchForm">
+
+                Já possui uma conta?
+
+                <a href="#" id="changeMode">
+
+                    Entrar
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ===================== -->
+<!-- DESKTOP -->
+<!-- ===================== -->
+
+<div id="desktop" style="display:none;">
+    <div id="world-map"></div>
+  
+
+    <div id="desktop-icons">
+
+        <div class="icon" id="open-terminal">
+            <div class="emoji">💻</div>
+            <span>Terminal</span>
+        </div>
+
+       <div class="icon" id="open-explorer">
+    <div class="emoji">📁</div>
+    <span>Wallpapers</span>
+</div>
+
+        <<div class="icon" id="open-settings">
+            <div class="emoji">⚙️</div>
+            <span>Configurações</span>
+        </div>
+
+        <div class="icon" id="open-player">
+            <div class="emoji">🎵</div>
+            <span>Música</span>
+        </div>
+
+        <div class="icon">
+            <div class="emoji">🌐</div>
+            <span>Navegador</span>
+        </div>
+
+    </div>
+  <div id="social-bar">
+
+    <a href="https://www.tiktok.com/@ensanguentei"
+       target="_blank"
+       class="social">
+        🎵 TikTok
+    </a>
+
+    <a href="https://discord.gg/CdPPwdnTk"
+       target="_blank"
+       class="social">
+        💬 Discord
+    </a>
+
+    <a href="https://www.instagram.com/ensanguentei/"
+       target="_blank"
+       class="social">
+        📸 Instagram
+    </a>
+
+</div>
+    <div id="taskbar">
+
+        <div id="taskbar-left">
+            BLACK TERMINAL OS
+        </div>
+
+        <div id="taskbar-right">
+            <span id="desktop-user"></span>
+            <span id="clock"></span>
+        </div>
+
+    </div>
+
+</div>
+    <!-- TERMINAL -->
+
+    <div id="terminal" style="display:none;">
+
+        <div id="output"></div>
+
+        <div class="input-line">
+
+            <span id="prompt">root@user:~$</span>
+
+            <input
+                id="command"
+                type="text"
+                autocomplete="off">
+
+        </div>
+
+    </div>
+
+    <!-- Música -->
+
+<!-- ===================== -->
+<!-- PLAYER DE MÚSICA -->
+<!-- ===================== -->
+
+<div id="player-window" style="display:none;">
+
+    <div id="player-header">
+        <span>🎵 Music Player</span>
+        <button id="close-player">✕</button>
+    </div>
+
+    <div id="player-body">
+
+        <img
+            id="album-cover"
+            src="assets/default-cover.png"
+            alt="Capa">
+
+        <h2 id="music-title">
+            Nenhuma música selecionada
+        </h2>
+
+        <audio id="music"></audio>
+
+        <div class="controls">
+            <button id="prevMusic">⏮️</button>
+            <button id="playMusic">▶️</button>
+            <button id="nextMusic">⏭️</button>
+        </div>
+
+        <input
+            type="range"
+            id="progress"
+            min="0"
+            max="100"
+            value="0">
+
+        <input
+            type="range"
+            id="volume"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.30">
+
+        <h3>Playlist</h3>
+
+        <ul id="music-list"></ul>
+
+    </div>
+
+</div>
+<!-- ===================== -->
+<!-- EXPLORER -->
+<!-- ===================== -->
+
+<div id="explorer-window" style="display:none;">
+
+    <div id="explorer-header">
+
+        <span>📁 Wallpapers</span>
+
+        <button id="close-explorer">✕</button>
+
+    </div>
+
+  <div id="explorer-body">
+
+    <div id="wallpapers-grid"></div>
+
+</div>
+</div>
+<script src="js/storage.js"></script>
+<script src="js/boot.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/filesystem.js"></script>
+<script src="js/commands.js"></script>
+<script src="js/terminal.js"></script>
+<script src="js/desktop.js"></script>
+<script src="js/explorer.js"></script>
+<script src="js/player.js"></script>
+<script src="js/matrix.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
