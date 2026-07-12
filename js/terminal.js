@@ -187,3 +187,8 @@
         input.value = "";
 
     });
+    const closeTerminal = document.getElementById("close-terminal");
+
+closeTerminal.addEventListener("click", () => {
+    terminal.style.display = "none";
+});

@@ -97,7 +97,7 @@ botao.addEventListener("click", () => {
         const musica = document.getElementById("music");
         musica.volume = 0.3;
         musica.play().catch((erro) => {
-            console.log("Erro ao tocar música:", erro);
+            console.log("Erro ao tocar música:", erro   );
         });
     } else {
         alert("Usuário ou senha incorretos.");

@@ -874,3 +874,27 @@ opacity: 1;
     background:#00cc55;
 
 }
+#terminal-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#00ff66;
+    color:#000;
+    padding:8px 12px;
+    font-weight:bold;
+}
+
+#close-terminal{
+    background:red;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    width:30px;
+    height:30px;
+    border-radius:4px;
+    font-size:16px;
+}
+
+#close-terminal:hover{
+    background:#cc0000;
+}
